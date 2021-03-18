@@ -28,6 +28,7 @@ class App extends Component {
           { listTodo.map((todo, index) => (
             <li key={ index + 1 }>
               <Item content={ todo } />
+              {/* Colocar o botão aqui */}
             </li>
           )) }
         </ul>
