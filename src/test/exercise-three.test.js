@@ -7,6 +7,7 @@ describe('Testando funcionalidade de apagar item selecionado', () => {
   test('Não deve haver botões com o texto Remover após renderizar a página', () => {
     const { findAllByTestId } = render(<App />);
     const btnRemove = findAllByTestId('id-remove')[0];
+
     expect(btnRemove).toBe(undefined);
   });
 
@@ -14,12 +15,15 @@ describe('Testando funcionalidade de apagar item selecionado', () => {
     const { getByLabelText, getByText, findAllByText, queryByText } = render(<App />);
     const inputTask = getByLabelText('Tarefa:');
     const btnAdd = getByText('Adicionar');
+
     userEvent.type(inputTask, 'Exercitar');
     userEvent.click(btnAdd);
     userEvent.type(inputTask, 'Estudar');
     userEvent.click(btnAdd);
+
     const [btnRemove] = await findAllByText('Remover');
     const selectTask = getByText('Exercitar');
+
     expect(selectTask).toBeInTheDocument();
     expect(btnRemove.disabled).toBe(true);
     userEvent.click(selectTask);

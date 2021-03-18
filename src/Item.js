@@ -5,7 +5,10 @@ function Item(props) {
   const { content, selectCallBack } = props;
 
   return (
-    <div className="Item" onClick={ (event) => selectCallBack(event, content)}>
+    <div
+      className="Item"
+      onClick={ (event) => selectCallBack(event, content)}
+    >
       { content }
     </div>
   );

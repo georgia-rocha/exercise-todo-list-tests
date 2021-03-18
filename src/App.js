@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   render() {
-    const { listTodo, selectedTodo } = this.state;
+    const { listTodo } = this.state;
     return (
       <div className="App">
         <InputTodo addTodo={(todo) => this.addTodo(todo)} />
@@ -37,4 +37,5 @@ class App extends Component {
     );
   }
 }
+
 export default App;
