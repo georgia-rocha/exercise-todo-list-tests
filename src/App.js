@@ -12,8 +12,8 @@ class App extends Component {
     };
 
     this.addTodo = this.addTodo.bind(this);
-    this.handleEvent = this.handleEvent.bind(this);
-    this.handleRemove = this.handleRemove.bind(this);
+    this.selectTodo = this.selectTodo.bind(this);
+    this.removeTodo = this.removeTodo.bind(this);
   }
 
   addTodo(todo) {
@@ -27,8 +27,7 @@ class App extends Component {
   }
 
   render() {
-    const { listTodo, selectedTodo } = this.state;
-
+    const { listTodo } = this.state;
     return (
       <main className="App">
         <InputTodo
