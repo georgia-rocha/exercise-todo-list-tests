@@ -5,7 +5,6 @@ import Item from './Item';
 class App extends Component {
   constructor(props) {
     super(props)
-
     this.state = {
       listTodo: [],
     };
@@ -18,7 +17,7 @@ class App extends Component {
   }
 
   render() {
-    const { listTodo } = this.state;
+    const { listTodo, selectedTodo } = this.state;
     return (
       <div className="App">
         <InputTodo addTodo={(todo) => this.addTodo(todo)} />
@@ -27,7 +26,8 @@ class App extends Component {
             {
               listTodo.map((todo, index) => (
                 <li key={index + 1}>
-                  <Item content={todo} />
+                  <Item content={todo} selectCallBack={ this.selectTodo } />
+                  {/* Colocar o botão aqui */} 
                 </li>
               ))
             }
