@@ -8,17 +8,30 @@ class App extends Component {
 
     this.state = {
       listTodo: [],
+      removeTodo: [],
+      selectedTodo: [],
     };
 
     this.addTodo = this.addTodo.bind(this);
+    this.selectTodo = this.selectTodo.bind(this);
+    this.removeTodo = this.removeTodo.bind(this);
   }
 
   addTodo(todo) {
     this.setState((state) => ({ listTodo: [...state.listTodo, todo] }));
   }
 
+  selectTodo(todo) {
+
+  }
+
+  removeTodo(todo) {
+
+  }
+
   render() {
     const { listTodo } = this.state;
+
     return (
       <main className="App">
         <InputTodo
@@ -26,7 +39,12 @@ class App extends Component {
         />
         <ul>
           { listTodo.map((todo, index) => (
-            <li key={ index + 1 }>
+            <li
+              key={ index + 1 }
+              onClick={ () => this.selectTodo(todo) }
+              onKeyDown={ () => this.selectTodo(todo) }
+              role="presentation"
+            >
               <Item content={ todo } />
               {/* Colocar o botão aqui */}
             </li>
