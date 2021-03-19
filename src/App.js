@@ -28,6 +28,7 @@ class App extends Component {
 
   render() {
     const { listTodo } = this.state;
+
     return (
       <main className="App">
         <InputTodo
