@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event'
 import App from '../App';
 
 describe('Testando funcionalidade de apagar item selecionado', () => {
-  test('Não deve haver botões com o texto Remover após renderizar a página', () => {
+  test('Não deve haver botões de remover após a primeira renderização da página', () => {
     const { findAllByTestId } = render(<App />);
     const btnRemove = findAllByTestId('id-remove')[0];
 
