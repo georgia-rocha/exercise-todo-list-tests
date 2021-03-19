@@ -36,6 +36,7 @@ class App extends Component {
 
   render() {
     const { listTodo } = this.state;
+
     return (
       <main className="App">
         <InputTodo
@@ -43,7 +44,12 @@ class App extends Component {
         />
         <ul>
           { listTodo.map((todo, index) => (
-            <li key={ index + 1 }>
+            <li
+              key={ index + 1 }
+              onClick={ () => this.selectTodo(todo) }
+              onKeyDown={ () => this.selectTodo(todo) }
+              role="presentation"
+            >
               <Item content={ todo } />
               {/* Colocar o botão aqui */}
             </li>
