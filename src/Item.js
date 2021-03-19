@@ -7,7 +7,7 @@ function Item(props) {
   return (
     <div
       className="Item"
-      onClick={ (event) => selectCallBack(event, content)}
+      onClick={ () => selectCallBack(content)}
     >
       { content }
     </div>

@@ -7,27 +7,40 @@ class App extends Component {
     super(props)
     this.state = {
       listTodo: [],
+      removeTodo: [],
+      selectedTodo: [],
     };
 
     this.addTodo = this.addTodo.bind(this);
+    this.selectTodo = this.selectTodo.bind(this);
+    this.removeTodo = this.removeTodo.bind(this);
   }
 
   addTodo(todo) {
     this.setState((state) => ({ listTodo: [...state.listTodo, todo] }));
   }
 
+  selectTodo(todo) {
+
+  }
+
+  removeTodo(todo) {
+
+  }
+
   render() {
-    const { listTodo } = this.state;
+    const { listTodo, selectedTodo } = this.state;
+
     return (
       <div className="App">
-        <InputTodo addTodo={(todo) => this.addTodo(todo)} />
+        <InputTodo addTodo={ (todo) => this.addTodo(todo) } />
         {listTodo &&
           <ul>
             {
               listTodo.map((todo, index) => (
-                <li key={index + 1}>
-                  <Item content={todo} selectCallBack={ this.selectTodo } />
-                  {/* Colocar o botão aqui */} 
+                <li key={ index + 1 }>
+                  <Item content={ todo } selectCallBack={ this.selectTodo } />
+                  {/* Coloque o botão aqui */}
                 </li>
               ))
             }
