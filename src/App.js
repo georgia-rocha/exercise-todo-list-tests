@@ -8,13 +8,30 @@ class App extends Component {
 
     this.state = {
       listTodo: [],
+      selectTask: '',
     };
 
     this.addTodo = this.addTodo.bind(this);
+    this.handleEvent = this.handleEvent.bind(this);
+    this.handleRemove = this.handleRemove.bind(this);
   }
 
   addTodo(todo) {
     this.setState((state) => ({ listTodo: [...state.listTodo, todo] }));
+  }
+
+  handleEvent({ target }) {
+    this.setState({
+      selectTask: target.innerHTML,
+    });
+  }
+
+  handleRemove() {
+    const { listTodo, selectTask } = this.state;
+    const newArr = listTodo.filter((itemList) => itemList !== selectTask);
+    this.setState({
+      listTodo: newArr,
+    });
   }
 
   render() {
