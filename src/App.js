@@ -21,7 +21,9 @@ class App extends Component {
     const { listTodo } = this.state;
     return (
       <main className="App">
-        <InputTodo addTodo={ (todo) => this.addTodo(todo) } />
+        <InputTodo
+          addTodo={ (todo) => this.addTodo(todo) }
+        />
         <ul>
           { listTodo.map((todo, index) => (
             <li key={ index + 1 }>
