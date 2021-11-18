@@ -66,5 +66,5 @@ Descrição do exercício, teste a aplicação, atenção ao que o test orienta:
 Diferente dos outros, os testes já estão pronto, sendo necessário criar apenas a funcionalidade.
 
 - Adicionar funcionalidade de selecionar uma task.
-- Botão para apagar a task selecionada.
+- Adicionar um botão para apagar a task selecionada com o texto "Remover". Esse botão deverá surgir ao adicionar cada task, ou seja, um botão por task.
 - Observe bem como os teste estão escritos, todos devem passar quando terminar a funcionalidade.
