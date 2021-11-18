@@ -4,7 +4,7 @@ import Item from './Item';
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       listTodo: [],
@@ -21,18 +21,18 @@ class App extends Component {
     const { listTodo } = this.state;
     return (
       <div className="App">
-        <InputTodo addTodo={(todo) => this.addTodo(todo)} />
-        {listTodo &&
+        <InputTodo addTodo={ (todo) => this.addTodo(todo) } />
+        {listTodo && (
           <ul>
             {
               listTodo.map((todo, index) => (
-                <li key={index + 1}>
-                  <Item content={todo} />
+                <li key={ index + 1 }>
+                  <Item content={ todo } />
                 </li>
               ))
             }
           </ul>
-        }
+        )}
       </div>
     );
   }
