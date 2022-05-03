@@ -20,20 +20,16 @@ class App extends Component {
   render() {
     const { listTodo } = this.state;
     return (
-      <div className="App">
+      <main className="App">
         <InputTodo addTodo={ (todo) => this.addTodo(todo) } />
-        {listTodo && (
-          <ul>
-            {
-              listTodo.map((todo, index) => (
-                <li key={ index + 1 }>
-                  <Item content={ todo } />
-                </li>
-              ))
-            }
-          </ul>
-        )}
-      </div>
+        <ul>
+          { listTodo.map((todo, index) => (
+            <li key={ index + 1 }>
+              <Item content={ todo } />
+            </li>
+          )) }
+        </ul>
+      </main>
     );
   }
 }

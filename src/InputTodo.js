@@ -15,16 +15,17 @@ class InputTodo extends Component {
     this.setState({ textTodo: value });
   }
 
-  addItem(value, callback) {
+  addItem(value) {
+    const { addTodo } = this.props;
+
     this.setState({ textTodo: '' });
-    callback(value);
+    addTodo(value);
   }
 
   render() {
-    const { addTodo } = this.props;
     const { textTodo } = this.state;
     return (
-      <div className="InputTodo">
+      <section className="InputTodo">
         <label htmlFor="inputTodo">
           Tarefa:
           <input
@@ -34,13 +35,13 @@ class InputTodo extends Component {
             onChange={ (e) => this.changeTextTodo(e.target.value) }
           />
         </label>
-        <input
-          id="btnAdd"
+        <button
           type="button"
-          value="Adicionar"
-          onClick={ () => this.addItem(textTodo, addTodo) }
-        />
-      </div>
+          onClick={ () => this.addItem(textTodo) }
+        >
+          Adicionar
+        </button>
+      </section>
     );
   }
 }
