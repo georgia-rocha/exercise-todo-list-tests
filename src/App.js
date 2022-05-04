@@ -8,7 +8,6 @@ class App extends Component {
 
     this.state = {
       listTodo: [],
-      selectedTodo: null,
     };
 
     this.addTodo = this.addTodo.bind(this);
