@@ -27,7 +27,7 @@ class App extends Component {
   }
 
   render() {
-    const { listTodo } = this.state;
+    const { listTodo, selectedTodo } = this.state;
 
     return (
       <main className="App">
