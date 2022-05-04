@@ -39,7 +39,7 @@ class App extends Component {
             <li key={ index + 1 }>
 
               <Item content={ todo } />
-              {/* Colocar os botões aqui */}
+              {/* Adicionar os botões aqui */}
             </li>
           )) }
         </ul>
