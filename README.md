@@ -9,13 +9,14 @@ Após feito o fork, clone o repositório criado para o seu computador.
 Rode o `npm install`.
 
 Vá para a branch master do seu projeto e execute o comando:
+
 - `git branch` ou `git branch -a`
 
 Verifique se as seguintes branchs apareceram:
 
-  `exercise-one`
-  `exercise-two`
-  `exercise-three`
+`exercise-one`
+`exercise-two`
+`exercise-three`
 
 - Cada branch dessas será um exercício.
 - Mude para a branch `exercise-one` com o comando `git checkout exercise-one`. É nessa branch que você realizará a solução para o exercício 1, e assim por diante.
@@ -28,7 +29,7 @@ Após a solução dos exercícios, abra um PR no seu repositório forkado e, se 
 
 ![PR do exercício](images/example-pr.png)
 
-É necessário realizar uma mudança. Clique no *base repository* como na imagem abaixo:
+É necessário realizar uma mudança. Clique no _base repository_ como na imagem abaixo:
 
 ![Mudando a base do repositório](images/change-base.png)
 
@@ -45,6 +46,7 @@ Para cada PR realize esse processo.
 #### Exercício 1
 
 Implemente os testes:
+
 - Necessário um botão para adicionar a tarefa.
 - Botão precisa conter o texto "Adicionar".
 - Ao ser clicado a tarefa digitada pelo o usuário precisa ser salva.
@@ -62,10 +64,12 @@ Teste a aplicação. Atenção ao que o teste orienta:
 
 ---
 
-#### Exercício 3 
+#### Exercício 3
 
 Diferente dos outros, os testes já estão prontos, sendo necessário criar apenas as funcionalidades que eles testam.
 
-- Adicionar funcionalidade de selecionar uma task.
-- Adicionar um botão para apagar a task selecionada com o texto "Remover". Esse botão deverá surgir ao adicionar cada task, ou seja, um botão por task.
+- Cada task adicionada deverá ter um botão ao lado dela com o texto "Selecionar"
+- Cada task adicionada deverá ter outro botão ao lado dela com o texto "Remover" e esse botão deve estar desabilitado
+- Ao clicar no botão "Selecionar" de uma task, ela deverá habilitar o seu botão de "Remover"
+- Ao clicar no botão "Remover" a task deverá ser removida da tela
 - Observe bem como os teste estão escritos, todos devem passar quando terminar a funcionalidade.
