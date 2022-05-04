@@ -8,7 +8,7 @@ describe('Testando a aplicação, testando botão, e sua funcionalidade', () => 
     render(<App />);
   });
 
-  test('Verifica se ao ser clicado é adicionado o que o usuário digitou', () => {
+  test('Ao clicar no botão Adicionar a taks dever adicionar na tela', () => {
     // Use o userEvent, para simular a digitação do usuário e o clique.
     render(<App />);
   });
