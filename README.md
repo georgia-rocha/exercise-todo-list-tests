@@ -69,10 +69,11 @@ Teste a aplicação. Atenção ao que o teste orienta:
 
 #### Exercício 3
 
-Diferente dos outros, os testes já estão prontos, sendo necessário criar apenas as funcionalidades que eles testam.
+Diferente dos outros exercícios anteriores, os testes desse exercício já estão prontos. Será necessário criar apenas as funcionalidades que eles testam.
 
-- Cada task adicionada deverá ter um botão ao lado dela com o texto "Selecionar"
+- Cada task adicionada deverá ter um botão, ao lado dela, com o texto "Selecionar"
 - Cada task adicionada deverá ter outro botão ao lado dela com o texto "Remover", esse botão deverá estar desabilitado
 - Ao clicar no botão "Selecionar" de uma task, ela deverá habilitar o seu botão de "Remover"
-- Ao clicar no botão "Remover" a task deverá ser removida da tela
-- Observe bem como os testes estão escritos, todos devem passar quando terminar a funcionalidade.
+- Ao clicar no botão "Remover", a task deverá ser removida da tela
+
+Aviso: Observe bem como os testes estão escritos, todos devem passar quando terminar a funcionalidade.
