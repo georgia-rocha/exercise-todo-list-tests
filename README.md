@@ -148,7 +148,7 @@ Implemente os testes para verificar os seguintes comportamentos da aplicação:
 
 <br />
 
-## Exercício bônus
+## Exercício 3
 
 > ⚠️ Faça o _checkout_ para a _branch_ deste exercício com o comando `git checkout exercise-three`.
 > 
