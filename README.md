@@ -56,6 +56,7 @@ Agora, basta criar o PULL REQUEST clicando no botão `Create Pull Request`.
 
 <details>
   <summary><strong>🛠️ Rodando a aplicação</strong></summary><br />
+
 Para rodar aplicação existente nesse repositório, siga os seguintes passos:
 1) Acesse a branch de cada exercício com o comando:
 
@@ -80,6 +81,7 @@ npm start
 
 <details>
   <summary><strong>👨‍💻 O que deverá ser desenvolvido</strong></summary><br />
+
 Neste repositório você encontra uma aplicação simples de Lista de Tarefas que já está funcionando. Dê uma olhada nos arquivos que estão dentro da pasta `src` e tende entender o que cada componente faz.
 
 A sua tarefa será criar os testes necessários para que garantir que as funcionalidades básicas estão se comportando da maneira esperada.
@@ -105,8 +107,6 @@ Implemente os testes para verificar os seguintes comportamentos da aplicação:
 
 - Verifique que existe um elemento com o texto "Adicionar".
 - Verifique que o elemento é do tipo `button`.
-
-- Verifique que um botão com o texto "Adicionar" está sendo renderizado.
 - Verifique que, ao clicar no botão "Adicionar", o texto que está digitado no input é adicionado à lista de tarefas renderizada e que o valor do input é limpo.
 
 </details>
