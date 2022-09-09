@@ -1,31 +1,38 @@
-Esse é um projeto para o conteúdo sobre `RTL`.
+# Boas vindas ao exercício de Lista de Tarefas com testes em RTL
 
-### Antes de iniciar
+---
+
+# Orientações
+
+<details>
+  <summary><strong>‼️ Antes de começar a desenvolver</strong></summary><br />
 
 - Crie um fork desse projeto, para isso siga esse [tutorial de como realizar um fork](https://guides.github.com/activities/forking/).
 
-Após feito o fork, clone o repositório criado para o seu computador.
+- Após fazer o fork, clone o repositório criado para o seu computador.
 
-Rode o `npm install`.
+- Rode o comando `npm install`.
 
-- Vá para a branch master do seu projeto e execute o comando:
+- Vá para a branch `main` do seu projeto e execute o comando `git branch` ou `git branch -a`
 
- `git branch` ou `git branch -a`
+- Verifique se as seguintes branchs apareceram (cada branch dessas será um exercício):
+  - `exercise-one`
+  - `exercise-two`
+  - `exercise-three`
 
-Verifique se as seguintes branchs apareceram:
 
-`exercise-one`
-`exercise-two`
-`exercise-three`
+- Mude para a branch `exercise-one` com o comando `git checkout exercise-one`. É nessa branch que você realizará a solução para o exercício 1, e assim por diante.
 
-Aviso: Cada branch dessas será um exercício.
+> 💡 Observe o que deve ser feito nas instruções para cada exercício.
 
-- Mude para a branch `exercise-one` com o comando `git checkout exercise-one`. 
-> É nessa branch que você realizará a solução para o exercício 1, e assim por diante.
+</details>
 
-Aviso: Observe o que deve ser feito nas instruções para cada exercício.
+<br />
 
-Após a solução dos exercícios, abra um PR no seu repositório forkado e, se quiser, mergeie para a master, sinta-se a vontade!
+<details>
+  <summary><strong>🤝 Depois de terminar o desenvolvimento</strong></summary><br />
+
+Após a solução dos exercícios, abra um PR no seu repositório forkado e, se quiser, mergeie para a `main`, sinta-se a vontade!
 
 **Atenção!**: Quando for criar o PR você irá se deparar com essa tela:
 
@@ -41,40 +48,118 @@ Mude para o seu repositório. Seu nome estará na frente do nome dele, por exemp
 
 Agora, basta criar o PULL REQUEST clicando no botão `Create Pull Request`.
 
-Aviso: Para cada PR realize esse processo.
+> 💡 Realize esse processo para cada PR que abrir.
 
-### COMEÇANDO OS EXERCÍCIOS
+</details>
 
-#### Exercício 1
+<br />
 
-Implemente os seguintes testes:
+<details>
+  <summary><strong>🛠️ Rodando a aplicação</strong></summary><br />
+Para rodar aplicação existente nesse repositório, siga os seguintes passos:
+1) Acesse a branch de cada exercício com o comando:
 
-- É necessário um botão para adicionar a tarefa.
-- O botão precisa conter o texto "Adicionar".
-- Ao ser clicado no botão, a tarefa digitada pelo o usuário precisa ser salva.
+```bash
+git checkout nome-da-branch
+```
 
-Pode adicionar mais testes que achar relevantes para verificar a funcionalidade desse botão.
+2) Instale as dependências com o comando:
 
----
+```bash
+npm i
+```
 
-#### Exercício 2
+3) Inicie a aplicação com o comando: 
 
-Teste a aplicação. Atenção ao que o teste orienta:
+```bash
+npm start
+``` 
+</details>
 
-- (I) Use o array já disponibilizado no código para realizar os testes; (II) Cada elemento do array será uma tarefa; (III) Simule a adição de todas e depois verifique se elas estão aparecendo.
-- Teste apenas o componente Item. 
-> Ao passar uma string para o componente Item, a string precisa aparecer na tela.
+<br />
 
----
+<details>
+  <summary><strong>👨‍💻 O que deverá ser desenvolvido</strong></summary><br />
+Neste repositório você encontra uma aplicação simples de Lista de Tarefas que já está funcionando. Dê uma olhada nos arquivos que estão dentro da pasta `src` e tende entender o que cada componente faz.
 
-#### Exercício 3
+A sua tarefa será criar os testes necessários para que garantir que as funcionalidades básicas estão se comportando da maneira esperada.
 
-Diferente dos outros exercícios anteriores, os testes desse exercício já estão prontos. Será necessário criar apenas as funcionalidades que eles testam.
+Além de escrever testes, também é importante entender como funcionam testes que já estão escritos. Por esse motivo, você também terá que fazer o caminho "contrário" e desenvolver algumas funcionalidades para que os testes existentes passem.
+</details>
 
-- Cada task adicionada deverá ter, ao seu lado, dois botões:
-    - Um botão precisa ter o texto "Selecionar";
-    - O outro botão precisa ter o texto "Remover". Esse botão deverá estar desabilitado
-- Ao clicar no botão "Selecionar" de uma task, ela deverá habilitar o seu botão de "Remover"
-- Ao clicar no botão "Remover", a task deverá ser removida da tela
+<br />
 
-Aviso: Observe bem como os testes estão escritos, todos devem passar quando terminar a funcionalidade.
+# Exercícios
+
+## Exercício 1
+
+> ⚠️ Faça o _checkout_ para a _branch_ deste exercício com o comando `git checkout exercise-one`.
+> 
+>  Utilize o arquivo `src/test/exercise-one.test.js` para adicionar os testes pedidos no exercício.
+
+
+Implemente os testes para verificar os seguintes comportamentos da aplicação:
+
+<details>
+  <summary>Verifique que um botão com o texto "Adicionar" está sendo renderizado</summary><br />
+
+- Verifique que existe um elemento com o texto "Adicionar".
+- Verifique que o elemento é do tipo `button`.
+
+- Verifique que um botão com o texto "Adicionar" está sendo renderizado.
+- Verifique que, ao clicar no botão "Adicionar", o texto que está digitado no input é adicionado à lista de tarefas renderizada e que o valor do input é limpo.
+
+</details>
+
+<details>
+  <summary>Verifique o comportamento de adicionar uma tarefa</summary><br />
+  
+- Verifique que existe um `input` com a `label` "Tarefa:".
+- Verifique que existe um botão com o texto "Adicionar".
+- Verifique que é possível digitar no `input`.
+- Verifique que o texto digitado só é adicionado à lista de tarefas **após** clicar no botão.
+
+</details>
+
+<br />
+
+## Exercício 2
+
+> ⚠️ Faça o _checkout_ para a _branch_ deste exercício com o comando `git checkout exercise-two`.
+> 
+>  Utilize o arquivo `src/test/exercise-two.test.js` para adicionar os testes pedidos no exercício.
+
+
+<details>
+  <summary>Verifique o comportamento de adicionar várias tarefas</summary><br />
+
+- Dentro do arquivo `src/test/exercise-two.test.js`, já existe um _array_ com diversos itens. Faça com que cada elemento desse _array_ seja um item da lista de tarefas.
+- Após adicionar todos os itens, verifique que todos eles estão sendo renderizados na tela.
+
+</details>
+
+<details>
+  <summary>Teste apenas o componente <code>Item</code></summary><br />
+
+- Renderize apenas o componente `<Item />` no teste.
+- Passe uma _string_ como _prop_ para o componente `<Item />` e verifique que esse texto está sendo renderizado na tela.
+
+</details>
+
+<br />
+
+## Exercício bônus
+
+> ⚠️ Faça o _checkout_ para a _branch_ deste exercício com o comando `git checkout exercise-three`.
+> 
+> Diferente dos exercícios anteriores, os testes para esse exercício já estão criados no arquivo `src/test/exercise-three.test.js`. Você deverá criar a funcionalidade para que os testes passem.
+
+💡 A ideia desse exercício é que você leia os testes e entenda o que precisa ser desenvolvido, por isso, aqui no README você encontrará apenas uma descrição bem simples de cada funcionalidade.  
+
+<details>
+  <summary>Adicione as seguintes funcionalidades</summary><br />
+
+- O botão "Adicionar" deve estar habilitado apenas quando há algum texto digitado no input.
+- Cada item da lista deve ter um botão com o texto "Remover" ao seu lado. Ao clicar nesse botão, a respectiva tarefa deve ser apagada da lista.
+
+</details>
