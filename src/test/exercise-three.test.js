@@ -36,7 +36,7 @@ describe('Testando a funcionalidade de desabilitar o botão `Adicionar`', () => 
   });
 });
 
-describe('Testando funcionalidade de apagar item selecionado', () => {
+describe('Testando funcionalidade de apagar uma tarefa adicionada', () => {
   test('Não deve haver botões de remover após a primeira renderização da página', () => {
     render(<App />);
     const allRemoveButtons = screen.queryAllByRole('button', { name: 'Remover' });
