@@ -3,16 +3,50 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from '../App';
 
-describe('Testando funcionalidade de apagar item selecionado', () => {
+describe('Testando a funcionalidade de desabilitar o botão `Adicionar`', () => {
+  test('O botão `Adicionar` deve estar desabilitado na primeira renderização', () => {
+    render(<App />);
+
+    const btnAdd = screen.getByText('Adicionar');
+
+    expect(btnAdd).toBeDisabled();
+  });
+
+  test('O botão `Adicionar` deve estar habilitado quando um valor é digitado', () => {
+    render(<App />);
+
+    const btnAdd = screen.getByText('Adicionar');
+    const inputTask = screen.getByLabelText('Tarefa:');
+
+    userEvent.type(inputTask, 'Estudar RTL');
+
+    expect(btnAdd).not.toBeDisabled();
+  });
+
+  test('O botão `Adicionar` deve estar desabilitado após adicionar uma tarefa', () => {
+    render(<App />);
+
+    const btnAdd = screen.getByText('Adicionar');
+    const inputTask = screen.getByLabelText('Tarefa:');
+
+    userEvent.type(inputTask, 'Estudar RTL');
+    userEvent.click(btnAdd);
+
+    expect(btnAdd).toBeDisabled();
+  });
+});
+
+describe('Testando funcionalidade de apagar uma tarefa adicionada', () => {
   test('Não deve haver botões de remover após a primeira renderização da página', () => {
     render(<App />);
-    const btnRemove = screen.queryAllByRole('button', { name: 'Remover' });
+    const allRemoveButtons = screen.queryAllByRole('button', { name: 'Remover' });
 
-    expect(btnRemove.length).toBe(0);
+    expect(allRemoveButtons.length).toBe(0);
   });
 
   test('Testando a seleção e remoção de uma task', async () => {
     render(<App />);
+
     const inputTask = screen.getByLabelText('Tarefa:');
     const btnAdd = screen.getByText('Adicionar');
 
@@ -23,16 +57,8 @@ describe('Testando funcionalidade de apagar item selecionado', () => {
 
     expect(screen.queryByText('Estudar')).toBeInTheDocument();
 
-    const selectTask = screen.queryAllByRole('button', { name: 'Selecionar' })[1];
-    expect(selectTask).toBeInTheDocument();
-
-    const btnRemove = screen.queryAllByRole('button', { name: 'Remover' })[1];
-    expect(btnRemove.disabled).toBe(true);
-
-    userEvent.click(selectTask);
-    expect(btnRemove.disabled).toBe(false);
-
-    userEvent.click(btnRemove);
+    const allRemoveButtons = screen.queryAllByRole('button', { name: 'Remover' });
+    userEvent.click(allRemoveButtons[1]);
     expect(screen.queryByText('Estudar')).not.toBeInTheDocument();
   });
 });
