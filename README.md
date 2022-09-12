@@ -152,7 +152,7 @@ Implemente os testes para verificar os seguintes comportamentos da aplicação:
 
 > ⚠️ Faça o _checkout_ para a _branch_ deste exercício com o comando `git checkout exercise-three`.
 > 
-> Diferente dos exercícios anteriores, os testes para esse exercício já estão criados no arquivo `src/test/exercise-three.test.js`. Note que os testes não estão passando - você deverá criar a funcionalidade para que os testes passem.
+> Diferente dos exercícios anteriores, os testes para esse exercício já estão criados no arquivo `src/test/exercise-three.test.js`. Note que alguns testes não estão passando - você deverá criar a funcionalidade para que os testes passem.
 
 💡 A ideia desse exercício é que você leia os testes e entenda o que precisa ser desenvolvido, por isso, aqui no README você encontrará apenas uma descrição bem simples de cada funcionalidade.  
 
