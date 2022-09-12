@@ -103,7 +103,7 @@ Além de escrever testes, também é importante entender como funcionam testes q
 Implemente os testes para verificar os seguintes comportamentos da aplicação:
 
 <details>
-  <summary>Verifique que um botão com o texto "Adicionar" está sendo renderizado</summary><br />
+  <summary>01 - Verifique que um botão com o texto "Adicionar" está sendo renderizado</summary><br />
 
 - Verifique que existe um elemento com o texto "Adicionar".
 - Verifique que o elemento é do tipo `button`.
@@ -112,7 +112,7 @@ Implemente os testes para verificar os seguintes comportamentos da aplicação:
 </details>
 
 <details>
-  <summary>Verifique o comportamento de adicionar uma tarefa</summary><br />
+  <summary>02 - Verifique o comportamento de adicionar uma tarefa</summary><br />
   
 - Verifique que existe um `input` com a `label` "Tarefa:".
 - Verifique que existe um botão com o texto "Adicionar".
@@ -131,7 +131,7 @@ Implemente os testes para verificar os seguintes comportamentos da aplicação:
 
 
 <details>
-  <summary>Verifique o comportamento de adicionar várias tarefas</summary><br />
+  <summary>01 - Verifique o comportamento de adicionar várias tarefas</summary><br />
 
 - Dentro do arquivo `src/test/exercise-two.test.js`, já existe um _array_ com diversos itens. Faça com que cada elemento desse _array_ seja um item da lista de tarefas.
 - Após adicionar todos os itens, verifique que todos eles estão sendo renderizados na tela.
@@ -139,7 +139,7 @@ Implemente os testes para verificar os seguintes comportamentos da aplicação:
 </details>
 
 <details>
-  <summary>Teste apenas o componente <code>Item</code></summary><br />
+  <summary>02 - Teste apenas o componente <code>Item</code></summary><br />
 
 - Renderize apenas o componente `<Item />` no teste.
 - Passe uma _string_ como _prop_ para o componente `<Item />` e verifique que esse texto está sendo renderizado na tela.
@@ -157,7 +157,7 @@ Implemente os testes para verificar os seguintes comportamentos da aplicação:
 💡 A ideia desse exercício é que você leia os testes e entenda o que precisa ser desenvolvido, por isso, aqui no README você encontrará apenas uma descrição bem simples de cada funcionalidade.  
 
 <details>
-  <summary>Adicione as seguintes funcionalidades</summary><br />
+  <summary>01 - Adicione as seguintes funcionalidades</summary><br />
 
 - O botão "Adicionar" deve estar habilitado apenas quando há algum texto digitado no input.
 - Cada item da lista deve ter um botão com o texto "Remover" ao seu lado. Ao clicar nesse botão, a respectiva tarefa deve ser apagada da lista.
