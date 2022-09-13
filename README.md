@@ -107,7 +107,6 @@ Implemente os testes para verificar os seguintes comportamentos da aplicação:
 
 - Verifique que existe um elemento com o texto "Adicionar".
 - Verifique que o elemento é do tipo `button`.
-- Verifique que, ao clicar no botão "Adicionar", o texto que está digitado no input é adicionado à lista de tarefas renderizada e que o valor do input é limpo.
 
 </details>
 
@@ -118,6 +117,7 @@ Implemente os testes para verificar os seguintes comportamentos da aplicação:
 - Verifique que existe um botão com o texto "Adicionar".
 - Verifique que é possível digitar no `input`.
 - Verifique que o texto digitado só é adicionado à lista de tarefas **após** clicar no botão.
+- Verifique que, ao clicar no botão "Adicionar", o texto que está digitado no input é adicionado à lista de tarefas renderizada e que o valor do input é limpo.
 
 </details>
 
