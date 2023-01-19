@@ -11,21 +11,30 @@ class App extends Component {
     };
 
     this.addTodo = this.addTodo.bind(this);
+    this.removeTodo = this.removeTodo.bind(this);
   }
 
   addTodo(todo) {
     this.setState((state) => ({ listTodo: [...state.listTodo, todo] }));
   }
 
+  removeTodo(indexTodo) {
+  }
+
   render() {
     const { listTodo } = this.state;
+
     return (
       <main className="App">
-        <InputTodo addTodo={ (todo) => this.addTodo(todo) } />
+        <InputTodo
+          addTodo={ (todo) => this.addTodo(todo) }
+        />
         <ul>
           { listTodo.map((todo, index) => (
             <li key={ index + 1 }>
+
               <Item content={ todo } />
+              {/* Colocar o botão aqui */}
             </li>
           )) }
         </ul>
@@ -33,4 +42,5 @@ class App extends Component {
     );
   }
 }
+
 export default App;
