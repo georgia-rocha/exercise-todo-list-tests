@@ -8,12 +8,10 @@ class App extends Component {
 
     this.state = {
       listTodo: [],
-      selectTask: '',
     };
 
     this.addTodo = this.addTodo.bind(this);
-    this.handleEvent = this.handleEvent.bind(this);
-    this.handleRemove = this.handleRemove.bind(this);
+    this.removeTodo = this.removeTodo.bind(this);
   }
 
   handleEvent({ target }) {
@@ -30,12 +28,19 @@ class App extends Component {
     });
   }
 
+  removeTodo(indexTodo) {
+    this.setState((prevState) => ({
+      listTodo: prevState.listTodo.filter((_, index) => index !== indexTodo),
+    }));
+  }
+
   addTodo(todo) {
     this.setState((state) => ({ listTodo: [...state.listTodo, todo] }));
   }
 
   render() {
     const { listTodo } = this.state;
+
     return (
       <main className="App">
         <InputTodo
@@ -44,7 +49,14 @@ class App extends Component {
         <ul>
           { listTodo.map((todo, index) => (
             <li key={ index + 1 }>
+
               <Item content={ todo } />
+              <button
+                type="button"
+                onClick={ () => this.removeTodo(index) }
+              >
+                Remover
+              </button>
             </li>
           )) }
         </ul>
@@ -52,4 +64,5 @@ class App extends Component {
     );
   }
 }
+
 export default App;
