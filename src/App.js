@@ -19,7 +19,9 @@ class App extends Component {
   }
 
   removeTodo(indexTodo) {
-    
+    this.setState((prevState) => ({
+      listTodo: prevState.listTodo.filter((_, index) => index !== indexTodo),
+    }));
   }
 
   render() {
@@ -35,7 +37,12 @@ class App extends Component {
             <li key={ index + 1 }>
 
               <Item content={ todo } />
-              {/* Colocar o botão aqui */}
+              <button
+                type="button"
+                onClick={ () => this.removeTodo(index) }
+              >
+                Remover
+              </button>
             </li>
           )) }
         </ul>
