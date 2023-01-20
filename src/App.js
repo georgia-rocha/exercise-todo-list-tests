@@ -16,10 +16,6 @@ class App extends Component {
     this.handleRemove = this.handleRemove.bind(this);
   }
 
-  addTodo(todo) {
-    this.setState((state) => ({ listTodo: [...state.listTodo, todo] }));
-  }
-
   handleEvent({ target }) {
     this.setState({
       selectTask: target.innerHTML,
@@ -32,6 +28,10 @@ class App extends Component {
     this.setState({
       listTodo: newArr,
     });
+  }
+
+  addTodo(todo) {
+    this.setState((state) => ({ listTodo: [...state.listTodo, todo] }));
   }
 
   render() {
