@@ -14,14 +14,28 @@ class App extends Component {
     this.removeTodo = this.removeTodo.bind(this);
   }
 
-  addTodo(todo) {
-    this.setState((state) => ({ listTodo: [...state.listTodo, todo] }));
+  handleEvent({ target }) {
+    this.setState({
+      selectTask: target.innerHTML,
+    });
+  }
+
+  handleRemove() {
+    const { listTodo, selectTask } = this.state;
+    const newArr = listTodo.filter((itemList) => itemList !== selectTask);
+    this.setState({
+      listTodo: newArr,
+    });
   }
 
   removeTodo(indexTodo) {
     this.setState((prevState) => ({
       listTodo: prevState.listTodo.filter((_, index) => index !== indexTodo),
     }));
+  }
+
+  addTodo(todo) {
+    this.setState((state) => ({ listTodo: [...state.listTodo, todo] }));
   }
 
   render() {
