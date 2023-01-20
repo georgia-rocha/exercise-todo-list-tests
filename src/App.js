@@ -19,6 +19,7 @@ class App extends Component {
   }
 
   removeTodo(indexTodo) {
+    
   }
 
   render() {
